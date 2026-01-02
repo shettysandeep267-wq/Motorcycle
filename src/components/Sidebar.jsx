@@ -7,12 +7,14 @@ import {
   FaUsers,
   FaChartBar,
   FaMotorcycle,
+  FaShoppingBag,
 } from 'react-icons/fa';
 
 const Sidebar = ({ isAdmin = false }) => {
   const adminMenuItems = [
     { path: '/admin/dashboard', label: 'Dashboard', icon: FaHome },
     { path: '/admin/inventory', label: 'Inventory', icon: FaBox },
+    { path: '/admin/orders', label: 'Orders', icon: FaShoppingBag },
     { path: '/admin/services', label: 'Services', icon: FaWrench },
     { path: '/admin/customers', label: 'Customers', icon: FaUsers },
     { path: '/admin/reports', label: 'Reports', icon: FaChartBar },

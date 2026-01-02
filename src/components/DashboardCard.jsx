@@ -2,7 +2,7 @@ import React from 'react';
 
 const DashboardCard = ({ title, value, icon: Icon, color = 'primary', subtitle }) => {
   const colorClasses = {
-    primary: 'bg-primary-500',
+    primary: 'bg-blue-500',
     green: 'bg-green-500',
     yellow: 'bg-yellow-500',
     red: 'bg-red-500',

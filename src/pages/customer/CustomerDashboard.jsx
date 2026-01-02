@@ -56,8 +56,8 @@ const CustomerDashboard = () => {
                 className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 <div className="flex items-center space-x-4">
-                  <div className="bg-primary-100 p-3 rounded-full">
-                    <FaMotorcycle className="text-primary-600" />
+                  <div className="bg-blue-100 p-3 rounded-full">
+                    <FaMotorcycle className="text-blue-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">{service.serviceType}</p>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaMotorcycle, FaEnvelope, FaLock, FaEye, FaEyeSlash, FaShieldAlt } from 'react-icons/fa';
 
 const AdminLogin = () => {
@@ -40,9 +40,7 @@ const AdminLogin = () => {
 
     setIsSubmitting(true);
 
-    // Simulate API call
     setTimeout(() => {
-      // Dummy authentication: set a token and redirect
       localStorage.setItem('adminToken', 'dummy-admin-token');
       setIsSubmitting(false);
       navigate('/admin/dashboard', { replace: true });
@@ -52,7 +50,6 @@ const AdminLogin = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors({ ...errors, [name]: '' });
     }
@@ -94,9 +91,7 @@ const AdminLogin = () => {
                   placeholder="admin@shop.com"
                 />
               </div>
-              {errors.email && (
-                <p className="mt-1 text-sm text-red-600">{errors.email}</p>
-              )}
+              {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
             </div>
 
             <div>
@@ -123,18 +118,7 @@ const AdminLogin = () => {
                   {showPassword ? <FaEyeSlash /> : <FaEye />}
                 </button>
               </div>
-              {errors.password && (
-                <p className="mt-1 text-sm text-red-600">{errors.password}</p>
-              )}
-            </div>
-
-            <div className="flex items-center justify-end">
-              <Link
-                to="#"
-                className="text-sm text-blue-600 font-medium hover:underline"
-              >
-                Forgot password?
-              </Link>
+              {errors.password && <p className="mt-1 text-sm text-red-600">{errors.password}</p>}
             </div>
 
             <button
@@ -145,13 +129,6 @@ const AdminLogin = () => {
               {isSubmitting ? 'Logging in...' : 'Login to Admin Panel'}
             </button>
           </form>
-
-          <p className="mt-6 text-center text-sm text-gray-600">
-            New admin?{' '}
-            <Link to="/signup/admin" className="text-blue-600 font-semibold hover:underline">
-              Sign up here
-            </Link>
-          </p>
         </div>
       </div>
     </div>
@@ -159,3 +136,4 @@ const AdminLogin = () => {
 };
 
 export default AdminLogin;
+

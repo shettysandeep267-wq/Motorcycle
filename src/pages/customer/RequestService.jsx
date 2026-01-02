@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaWrench, FaCog, FaOilCan, FaStopCircle, FaLink, FaBatteryHalf, FaTire, FaBolt, FaCompress, FaSearch, FaCheck } from 'react-icons/fa';
+import { FaWrench, FaCog, FaOilCan, FaStopCircle, FaLink, FaBatteryHalf, FaCircle, FaBolt, FaCompress, FaSearch, FaCheck } from 'react-icons/fa';
 
 const RequestService = () => {
   const navigate = useNavigate();
@@ -60,7 +60,7 @@ const RequestService = () => {
     {
       id: 7,
       name: 'Tyre Replacement',
-      icon: FaTire,
+      icon: FaCircle,
       description: 'Tyre replacement with balancing and alignment',
       price: 3000,
     },

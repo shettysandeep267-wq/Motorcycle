@@ -6,9 +6,14 @@ const Navbar = ({ isAdmin = false, isCustomer = false }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('adminToken');
-    localStorage.removeItem('customerToken');
-    navigate('/');
+    try {
+      localStorage.removeItem('adminToken');
+      localStorage.removeItem('customerToken');
+      navigate('/');
+    } catch (error) {
+      console.error('Logout error:', error);
+      window.location.href = '/';
+    }
   };
 
   return (
